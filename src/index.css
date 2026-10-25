@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--bg:#fff;--soft:#F4F6F9;--ink:#0F1B2D;--muted:#4A5668;--line:#DDE3EA;--navy:#0B2545;--onnavy:#fff;--saffron:#E8821A;--green:#1B7A4B;--greensoft:#E6F4EC;--alert:#FFF4E5;--alertink:#7A3E00;--fs:100%;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1626;--soft:#13213A;--ink:#EEF2F8;--muted:#AAB6C8;--line:#26354F;--navy:#9CC0FF;--onnavy:#0B2545;--green:#5CCB93;--greensoft:#123325;--alert:#33230F;--alertink:#FFCB8A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C1626;--soft:#13213A;--ink:#EEF2F8;--muted:#AAB6C8;--line:#26354F;--navy:#9CC0FF;--onnavy:#0B2545;--green:#5CCB93;--greensoft:#123325;--alert:#33230F;--alertink:#FFCB8A;color-scheme:dark}
+:root[data-contrast="high"]{--muted:var(--ink);--line:var(--ink)}
+html{font-size:var(--fs);scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Hind,"Noto Sans Devanagari","Noto Sans Bengali","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Gujarati","Noto Sans Kannada","Noto Sans Malayalam","Noto Naskh Arabic",system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:"Source Serif 4","Noto Sans Devanagari","Noto Sans Bengali","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Gujarati","Noto Sans Kannada","Noto Sans Malayalam","Noto Naskh Arabic",Georgia,serif;line-height:1.2;margin:0}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.pulse{animation:pulse 2.4s ease-out 1}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,130,26,.55)}100%{box-shadow:0 0 0 18px rgba(232,130,26,0)}}
+details>summary{list-style:none;cursor:pointer}details>summary::-webkit-details-marker{display:none}
+details[open] .chev{transform:rotate(180deg)}
